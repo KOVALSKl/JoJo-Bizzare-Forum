@@ -26,10 +26,13 @@ class NewsController {
         }
     }
 
-    async getAll(req, res) {
+    async getRequiredAmount(req, res, next) {
         try {
-            let news = await SingleNews.findAll();
-            return res.json(news);
+            let { offset, limit } = req.query
+
+            let requiredNews = await SingleNews.findAll({ offset: offset, limit: limit });
+
+            return res.json(requiredNews);
         } catch (e) {
             next(ApiError.badRequest(e.message))
         }

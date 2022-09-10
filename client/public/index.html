@@ -7,14 +7,30 @@
   <meta name="description" content="Jojo's Bizzare Forum" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   <title>Jojo's Bizzare Forum</title>
+
   <style>
-    body {
-      background-color: #3d3c3c;
+    :root {
+      --pages-bg-color: linear-gradient(180deg, #080A30 0%, #653C42 100%);
+      --moz-pages-bg-color: -moz-linear-gradient(180deg, #080A30 0%, #653C42 100%);
+      --webkit-pages-bg-color: -webkit-linear-gradient(180deg, #080A30 0%, #653C42 100%);
+      --o-pages-bg-color: -o-linear-gradient(180deg, #080A30 0%, #653C42 100%);
     }
 
-    body * {
-      color: white;
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      background: var(--pages-bg-color);
     }
   </style>
 </head>

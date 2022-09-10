@@ -1,0 +1,19 @@
+.form-input {
+    padding: 16px 30px;
+
+    background: rgba(6, 6, 6, 0.75);
+    border: 3px solid linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(171, 30, 206, 0.2));
+    border-radius: 26px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FFFFFF;
+
+    outline: none;
+
+    width: 100%;
+}

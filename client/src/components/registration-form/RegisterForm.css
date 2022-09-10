@@ -1,0 +1,46 @@
+.registration-form {
+    width: 365px;
+
+    padding: 38px 29px 39px 40px;
+    background: rgba(0, 0, 0, 0.5) url('../../assets/auth-form-bg.png') top center no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form>input {
+    margin-bottom: 16px;
+}
+
+.registration-form .gender-radios {
+    display: flex;
+    align-items: flex-end;
+}
+
+.registration-form .gender-radios .male-btn {
+    position: relative;
+    z-index: 1;
+    left: -18px;
+}
+
+.registration-form .gender-radios .radio-label-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+
+    color: #000000;
+}
+
+.registration-form .gender-radios .radio-label-text {
+    position: absolute;
+    top: 73.5px;
+    left: 73px;
+}
+
+#female-label-text-pos {
+    top: 57.5px;
+    left: 46px;
+}

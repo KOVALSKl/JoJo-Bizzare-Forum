@@ -1,0 +1,26 @@
+.auth-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 40px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+
+    height: 100%;
+}
+
+.auth-block .block-title {
+    padding-bottom: 22px;
+
+    font-weight: 700;
+    font-size: 32px;
+
+    background: linear-gradient(180deg, #9D0AD0 0%, #D159FB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

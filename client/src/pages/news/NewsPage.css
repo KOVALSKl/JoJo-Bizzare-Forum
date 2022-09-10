@@ -1,0 +1,31 @@
+.news-block {
+    padding-top: 32px;
+    padding-bottom: 50px;
+}
+
+.news-block .block-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    /* Block Title */
+
+    background: linear-gradient(180deg, #9D0AD0 0%, #D159FB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    padding-bottom: 18px;
+}
+
+.news-block .block-content {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    width: 100%;
+}

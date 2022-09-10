@@ -1,6 +1,6 @@
 function AdminPage() {
     return (
-        <div>
+        <div className="page">
             Admin
         </div>
     );
