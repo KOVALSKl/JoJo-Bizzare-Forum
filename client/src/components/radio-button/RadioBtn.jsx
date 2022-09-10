@@ -1,6 +1,6 @@
 import './RadioBtn.css'
 
-function RadioBtn({ id, name, value, bgImage, alt, classNames = [], setValue, children }) {
+function RadioBtn({ id, name, value, bgImage, alt, classNames = [], onChange, children }) {
     return (
         <div className={['radio-btn-container col-6', ...classNames].join(' ')}>
             <label className="radio-input-label" htmlFor={id}>
@@ -14,7 +14,7 @@ function RadioBtn({ id, name, value, bgImage, alt, classNames = [], setValue, ch
                 name={name}
                 value={value}
                 onChange={(e) => {
-                    setValue(e.target.value)
+                    onChange(e.target.value)
                 }}
             />
         </div>

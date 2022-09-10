@@ -1,5 +1,7 @@
 .radio-btn-container {
     position: relative;
+    transition: filter 350ms;
+    z-index: 9999;
 }
 
 .radio-btn-container .radio-btn {
@@ -8,4 +10,9 @@
 
 .radio-btn-container .radio-input-label {
     position: relative;
+}
+
+.radio-btn-container.blur {
+    filter: blur(2.5px);
+    z-index: 0;
 }
