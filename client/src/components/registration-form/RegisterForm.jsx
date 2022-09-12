@@ -9,6 +9,8 @@ import { useState } from 'react'
 import { useEffect } from 'react';
 import Button from '../button/Button';
 import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+const axios = require('axios').default;
 
 function RegisterForm() {
 
@@ -18,6 +20,23 @@ function RegisterForm() {
     const [birthday, setBirthday] = useState(null);
     const [password, setPassword] = useState(null);
 
+    const [cookies, setCookie] = useCookies(['token']);
+
+    async function registration() {
+        try {
+            const response = await axios.post('http://localhost:3000/api/user/registration', {
+                nickname: username,
+                email: email,
+                birthday: birthday,
+                password: password
+            });
+            let now = new Date();
+            now.setDate(now.getDate() + 1);
+            setCookie('token', response.data.token, { path: '/', expires: now });
+        } catch (e) {
+            console.log(e);
+        }
+    }
 
     return (
         <form className="registration-form">
@@ -67,7 +86,7 @@ function RegisterForm() {
                 type='password'
                 placeholder='Password'
                 onChange={setPassword} />
-            <Button classNames={['submit-btn']}>
+            <Button classNames={['submit-btn']} onClick={registration} type="button">
                 Sign Up
             </Button>
             <Link to={'/home'} className='back-btn'>

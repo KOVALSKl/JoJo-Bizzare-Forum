@@ -3,9 +3,9 @@ import './Button.css'
 function Button({ children, classNames = [], onClick, type }) {
     return (
         <button
-            className={['btn', ...classNames].join(' ')}
+            className={['button', ...classNames].join(' ')}
             type={type}
-            onClick={(e) => onClick()}>
+            onClick={(e) => onClick(e)}>
             {children}
         </button>
     );

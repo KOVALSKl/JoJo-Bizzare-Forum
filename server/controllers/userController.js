@@ -28,7 +28,7 @@ class UserController {
             let gmtDate = new Date(birthday);
 
             // TODO: ПРАВИЛЬНАЯ РЕГУЛИРОВКА РОЛЕЙ
-            let role = await Role.findOne({ where: { name: "ADMIN" } });
+            let role = await Role.findOne({ where: { name: "USER" } });
 
             const user = await User.create({
                 nickname: nickname,

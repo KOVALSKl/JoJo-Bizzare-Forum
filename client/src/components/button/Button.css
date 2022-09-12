@@ -1,10 +1,7 @@
-.btn {
+.button {
     font-family: Montserrat;
     font-style: normal;
 
-    transition: all 400ms;
-}
-
-.btn:hover {
+    transition: transform 400ms;
     color: #FFFFFF;
 }

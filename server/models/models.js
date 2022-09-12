@@ -24,8 +24,11 @@ const User = sequelize.define('user', {
     birthday: {
         type: DataTypes.DATE,
         allowNull: false
+    },
+    gender: {
+        type: DataTypes.CHAR(10),
+        defaultValue: 'male'
     }
-
 });
 
 const Role = sequelize.define('role', {
