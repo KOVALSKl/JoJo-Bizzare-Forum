@@ -5,7 +5,6 @@ import './Menu.css'
 function Menu({ active }) {
 
     return (
-
         <div id='menu' style={
             (active)
                 ? { visibility: 'visible' }

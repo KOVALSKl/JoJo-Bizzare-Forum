@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import Button from '../button/Button';
 import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import { useNavigate } from 'react-router-dom';
 const axios = require('axios').default;
 
 function RegisterForm() {
@@ -22,6 +23,8 @@ function RegisterForm() {
 
     const [cookies, setCookie] = useCookies(['token']);
 
+    let navigate = useNavigate();
+
     async function registration() {
         try {
             const response = await axios.post('http://localhost:3000/api/user/registration', {
@@ -33,6 +36,7 @@ function RegisterForm() {
             let now = new Date();
             now.setDate(now.getDate() + 1);
             setCookie('token', response.data.token, { path: '/', expires: now });
+            navigate('/home')
         } catch (e) {
             console.log(e);
         }
