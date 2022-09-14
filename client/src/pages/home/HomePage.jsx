@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 function HomePage({ children }) {
 
     useEffect(() => {
-        console.log('mounted');
+        // console.log('mounted');
         // TODO: Реализовать проверку токена и его обнавление при каждом переходе на страницу
         // TODO: Попробовать сделать это хуком или middleware
     }, [])
@@ -50,7 +50,7 @@ function HomePage({ children }) {
 
     return (
         <div className="home">
-            <Container>
+            <Container className='page'>
                 <div className="welcome-block">
                     <div className="block-title">
                         <h1 id="main-title">

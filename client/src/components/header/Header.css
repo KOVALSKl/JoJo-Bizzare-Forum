@@ -9,8 +9,10 @@
     align-items: center;
     justify-content: center;
 
-    position: relative;
+    position: fixed;
     z-index: 9999;
+
+    transition: height 300ms;
 }
 
 .header-logo {

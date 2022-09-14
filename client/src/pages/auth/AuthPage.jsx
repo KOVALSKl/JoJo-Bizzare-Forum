@@ -10,7 +10,7 @@ function AuthPage() {
 
     return (
 
-        <Container className="auth-block">
+        <Container className="auth-block page">
             <h2 className="block-title">
                 {
                     (!isAuth)

@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useGetSingleNewsQuery } from "../../features/api/apiSlice";
+import { BASE_URL } from '../../utils/consts'
 
 function SingleNewsPage() {
     let { id } = useParams();
@@ -21,7 +22,7 @@ function SingleNewsPage() {
             <div>
                 <p>Title: {singleNews.title}</p>
                 <p>Date: {singleNews.date}</p>
-                <img src={`http://localhost:3000/static/news/${singleNews.image}`} />
+                <img src={`${BASE_URL}/static/news/${singleNews.image}`} />
                 <br />
                 <p>{singleNews.description}</p>
                 <p>{singleNews.userNickname}</p>

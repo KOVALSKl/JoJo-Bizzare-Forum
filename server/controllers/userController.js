@@ -70,7 +70,7 @@ class UserController {
     async check(req, res, next) {
         let user = req.user;
         const token = generateJWT(user.nickname, user.email, user.role);
-        return res.json({ token });
+        return res.json({ token, user });
     }
 
     async getAll(req, res, next) {

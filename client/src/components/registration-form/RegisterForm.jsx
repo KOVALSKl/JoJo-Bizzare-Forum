@@ -11,6 +11,7 @@ import Button from '../button/Button';
 import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import { useNavigate } from 'react-router-dom';
+import { BASE_URL } from '../../utils/consts';
 const axios = require('axios').default;
 
 function RegisterForm() {
@@ -27,7 +28,7 @@ function RegisterForm() {
 
     async function registration() {
         try {
-            const response = await axios.post('http://localhost:3000/api/user/registration', {
+            const response = await axios.post(`${BASE_URL}/api/user/registration`, {
                 nickname: username,
                 email: email,
                 birthday: birthday,
