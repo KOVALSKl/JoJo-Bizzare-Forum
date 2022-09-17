@@ -17,43 +17,44 @@ function App() {
   const user = useSelector((state) => state.user.value);
   const dispatch = useDispatch();
 
+  let checkAuthor = async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/api/user/auth`, {
+        headers: {
+          'Authorization': `Bearer ${cookies.token}`
+        }
+      });
+
+      let { user: userData, token: updatedToken } = response.data;
+      let now = new Date();
+      now.setDate(now.getDate() + 1);
+      setCookie('token', updatedToken, { path: '/', expires: now });
+
+      dispatch(setUser(userData));
+
+    } catch (e) {
+      console.log(e.response.data.message);
+      dispatch(setUser(null));
+    }
+  }
+
   const [cookies, setCookie] = useCookies(['token'])
 
   useEffect(() => {
-    async function checkAuthor() {
-      try {
-        const response = await axios.get(`${BASE_URL}/api/user/auth`, {
-          headers: {
-            'Authorization': `Bearer ${cookies.token}`
-          }
-        });
-
-        let { user: userData, token: updatedToken } = response.data;
-        let now = new Date();
-        now.setDate(now.getDate() + 1);
-        setCookie('token', updatedToken, { path: '/', expires: now });
-
-        dispatch(setUser(userData));
-
-      } catch (e) {
-        console.log(e.response.data.message);
-        dispatch(setUser(null));
-      }
-    }
-
     checkAuthor();
-  }, [])
+  }, [cookies.token])
 
   return (
-    <div className='app' onClick={() => {
-      if (isMenuOpen) dispatch(close());
-    }}>
-      <BrowserRouter>
-        <Header />
+
+    <BrowserRouter>
+      <Header />
+      <div className='app' onClick={() => {
+        if (isMenuOpen) dispatch(close());
+      }}>
         <AppRouter />
-        <Outlet />
-      </BrowserRouter>
-    </div>
+      </div>
+      <Outlet />
+    </BrowserRouter >
   );
 }
 

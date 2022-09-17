@@ -5,7 +5,7 @@
     position: absolute;
     top: 63px;
     right: -12px;
-    z-index: 0;
+    z-index: 99999;
 
     background: linear-gradient(180deg, #080A30 0%, #3B3F82 100%);
     box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.25);
@@ -27,12 +27,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.account-block #userlogo {
-    border-radius: 100%;
-    background: url('../../assets/jojo_logo.png') no-repeat center center;
-    background-size: cover;
 }
 
 .account-block #userlogin {
@@ -74,6 +68,8 @@
     background-clip: text;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    width: fit-content;
 }
 
 .menu-item>a {

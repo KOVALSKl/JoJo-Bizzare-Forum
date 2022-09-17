@@ -1,7 +1,7 @@
 .radio-btn-container {
     position: relative;
     transition: filter 350ms;
-    z-index: 9999;
+    z-index: 99;
 }
 
 .radio-btn-container .radio-btn {

@@ -1,19 +1,12 @@
-.registration-form {
-    width: 365px;
-
-    padding: 38px 29px 39px 40px;
-    background: rgba(0, 0, 0, 0.5) url('../../assets/auth-form-bg.png') top center no-repeat;
-    background-size: cover;
-    border-radius: 30px;
-
+.auth-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    margin-bottom: 10px;
-}
+    font-family: 'Montserrat';
+    font-style: normal;
 
-.registration-form>input {
-    margin-bottom: 16px;
+    height: 100%;
 }
 
 .registration-form .gender-radios {

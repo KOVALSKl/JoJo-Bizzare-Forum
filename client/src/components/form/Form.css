@@ -1,0 +1,15 @@
+.user-form {
+    padding: 38px 29px 39px 40px;
+    background: rgba(0, 0, 0, 0.5) url('../../assets/auth-form-bg.png') top center no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+}
+
+.user-form>input {
+    margin-bottom: 16px;
+}

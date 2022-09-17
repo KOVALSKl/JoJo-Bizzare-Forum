@@ -1,6 +1,7 @@
 import AdminPage from "../pages/admin/AdminPage"
 import HomePage from "../pages/home/HomePage"
-import AuthPage from "../pages/auth/AuthPage"
+import RegistrationPage from "../pages/auth/registr/RegistrationPage"
+import LoginPage from "../pages/auth/login/LoginPage"
 import NewsPage from "../pages/news/NewsPage"
 import DiscussionsPage from "../pages/discussions/DiscussionsPage"
 import StandsPage from "../pages/stands/StandsPage"
@@ -17,11 +18,11 @@ export const ADMIN_ROUTE = {
 }
 export const LOGIN_ROUTE = {
     path: '/login',
-    element: <AuthPage />
+    element: <LoginPage />
 }
 export const REGISTRATION_ROUTE = {
     path: '/registration',
-    element: <AuthPage />
+    element: <RegistrationPage />
 }
 export const NEWS_ROUTE = {
     path: '/news',

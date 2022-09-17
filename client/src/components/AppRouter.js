@@ -17,7 +17,6 @@ function AppRouter() {
             </Route>
             <Route path={LOGIN_ROUTE.path} element={LOGIN_ROUTE.element} />
             <Route path={REGISTRATION_ROUTE.path} element={REGISTRATION_ROUTE.element} />
-
             <Route path="*" element={<HomePage />} />
         </Routes>
     );

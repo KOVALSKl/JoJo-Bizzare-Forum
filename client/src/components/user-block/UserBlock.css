@@ -1,0 +1,99 @@
+.user-block #userlogo {
+    border-radius: 100%;
+    background: url('../../assets/account-circle.svg') no-repeat center center;
+    background-size: cover;
+
+    width: 85px;
+    height: 85px;
+}
+
+.not-authorized-user,
+.authorized-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-authorized-user {
+    position: relative;
+    right: -8px;
+}
+
+.not-authorized-user>img {
+    width: 160px;
+    position: relative;
+    right: -8px;
+}
+
+.not-authorized-user .join-us-span {
+    position: absolute;
+    top: 9px;
+    right: 3.5px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8.7px;
+    line-height: 8.7px;
+
+    background: linear-gradient(180deg, rgba(204, 57, 255, 0.9) 0%, rgba(125, 66, 146, 0.9) 46.15%, rgba(92, 12, 120, 0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    transform: rotate(9.78deg);
+
+    z-index: 10;
+}
+
+.not-authorized-user .join-section-button {
+    background: linear-gradient(90deg, #0094FF 21.15%, rgba(75, 255, 82, 0.79) 49.79%, #0094FF 83.65%);
+    background-size: 200% 200%;
+    background-position: center center;
+    border-radius: 30px;
+    width: 135px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+
+    color: #FFFFFF;
+
+    border: none;
+
+    margin-bottom: 8px;
+
+    text-align: center;
+    text-decoration: none;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.27);
+}
+
+.not-authorized-user .join-section-button:active,
+.not-authorized-user .join-section-button:hover {
+    animation: gradient-animation 8s ease infinite
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: center center;
+    }
+
+    25% {
+        background-position: right center;
+    }
+
+    50% {
+        background-position: center center;
+    }
+
+    75% {
+        background-position: left center;
+    }
+
+    100% {
+        background-position: center center;
+    }
+}

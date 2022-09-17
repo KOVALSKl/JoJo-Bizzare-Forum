@@ -8,13 +8,6 @@ import { Link } from "react-router-dom";
 import { useEffect } from 'react';
 
 function HomePage({ children }) {
-
-    useEffect(() => {
-        // console.log('mounted');
-        // TODO: Реализовать проверку токена и его обнавление при каждом переходе на страницу
-        // TODO: Попробовать сделать это хуком или middleware
-    }, [])
-
     const {
         data: news,
         isLoading,
